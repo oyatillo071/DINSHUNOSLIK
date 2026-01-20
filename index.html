@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dinshunoslik Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="data.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap");
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #f8fafc;
+      }
+      .option-card:active {
+        transform: scale(0.98);
+      }
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex items-center justify-center p-4">
+    <div
+      id="app"
+      class="max-w-3xl w-full glass-panel rounded-3xl shadow-2xl overflow-hidden min-h-[550px] flex flex-col"
+    >
+      <!-- Bosh sahifa / Mavzular menyusi -->
+      <div id="menu-screen" class="p-8 relative py-28">
+        <div class="text-center mb-10">
+          <h1 class="text-3xl font-extrabold text-slate-800 mb-2">
+            Dinshunoslik Quiz
+          </h1>
+          <p class="text-slate-500">
+            Bilimingizni sinash uchun quyidagi mavzulardan birini tanlang
+          </p>
+        </div>
+
+        <div id="topics-list" class="grid grid-cols-1 gap-4">
+          <!-- Mavzular ro'yxati JS orqali yaratiladi -->
+        </div>
+
+        <div
+          class="mt-6 pt-6 fixed bottom-0 left-0 bg-blue-100 right-0 border-t border-slate-200"
+        >
+          <button
+            onclick="startMixedTest()"
+            class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-4 rounded-2xl font-bold hover:from-purple-700 hover:to-blue-700 shadow-lg shadow-purple-200 transition-all text-lg"
+          >
+            🎯 IMTIHON REJIM (Jami 40ta savol)
+          </button>
+          <p class="text-center text-sm text-slate-500 mt-3">
+            Barcha mavzulardan random savollar
+          </p>
+        </div>
+      </div>
+
+      <!-- Quiz Test Sahifasi -->
+      <div id="quiz-screen" class="hidden flex-col h-full">
+        <div class="h-2 bg-slate-100">
+          <div
+            id="progress-bar"
+            class="h-full w-0 bg-blue-600 transition-all duration-500"
+          ></div>
+        </div>
+
+        <!-- BAJARILGANLIK SHKALASI -->
+        <div class="px-8 pt-4 pb-2">
+          <div class="flex gap-1 flex-wrap" id="progress-dots">
+            <!-- Dotslar JS orqali yaratiladi -->
+          </div>
+        </div>
+
+        <div class="p-8 flex-grow overflow-y-auto">
+          <div class="flex justify-between items-center mb-8">
+            <button
+              onclick="showMenu()"
+              class="text-slate-500 font-semibold flex items-center hover:text-blue-600 transition-colors"
+            >
+              <svg
+                class="w-5 h-5 mr-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+              Menyu
+            </button>
+            <span
+              id="counter"
+              class="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+            ></span>
+          </div>
+
+          <div id="question-area">
+            <h2
+              id="question-text"
+              class="text-xl text-slate-800 font-bold mb-10 leading-snug"
+            ></h2>
+            <div id="options-container" class="grid grid-cols-1 gap-3">
+              <!-- Variantlar -->
+            </div>
+
+            <!-- SAVOL TASHLAB O'TISH TUGMASI -->
+            <div class="mt-6 hidden pt-6 border-t border-slate-200">
+              <button
+                onclick="nextUnansweredQuestion()"
+                class="w-full bg-slate-200 text-slate-700 px-6 py-3 rounded-xl font-semibold hover:bg-slate-300 transition-all flex items-center justify-center gap-2"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 5l7 7-7 7M5 5l7 7-7 7"
+                  ></path>
+                </svg>
+                Keyingi javobsiz savol (Space)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yakuniy Natija Sahifasi -->
+      <div
+        id="result-screen"
+        class="hidden p-8 flex-col items-center justify-start overflow-y-auto"
+      >
+        <div id="result-status-icon" class="mb-6 p-4 rounded-full"></div>
+        <h2 class="text-3xl font-bold text-slate-800 mb-2">Test Yakunlandi</h2>
+        <p id="final-score-text" class="text-lg text-slate-600 mb-8"></p>
+
+        <!-- Xato savollar ro'yxati -->
+        <div id="mistakes-container" class="w-full mb-8">
+          <!-- Xato savollar JS orqali yaratiladi -->
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+          <button
+            onclick="restartTopic()"
+            class="bg-blue-600 text-white px-10 py-3 rounded-xl font-bold hover:bg-blue-700 shadow-lg shadow-blue-200 transition-all"
+          >
+            Qayta urinish
+          </button>
+          <button
+            onclick="showMenu()"
+            class="bg-slate-200 text-slate-700 px-10 py-3 rounded-xl font-bold hover:bg-slate-300 transition-all"
+          >
+            Boshqa mavzu
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Savollari randomize qiluvchi funksiya
+      function randomizeQuestions(questions) {
+        return questions.map((q) => {
+          const correctText = q.options[q.correct];
+          const shuffled = [...q.options].sort(() => Math.random() - 0.5);
+          const newCorrectIndex = shuffled.indexOf(correctText);
+
+          return {
+            ...q,
+            options: shuffled,
+            correct: newCorrectIndex,
+          };
+        });
+      }
+
+      // Butun savol va javoblarni randomize qilish
+      function shuffleArray(array) {
+        const arr = [...array];
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+      }
+
+      let currentTopicKey = "";
+      let currentIdx = 0;
+      let score = 0;
+      let canAnswer = true;
+      let currentQuestions = [];
+      let isMixedTest = false;
+      let mistakesList = []; // Xato savollar
+      let selectedTopic = null; // Keyboard navigatsiya uchun
+      let selectedOption = -1; // Tanlangan javob variant
+      let questionStatuses = []; // Har bir savol uchun status (correct/wrong/pending)
+      let answerHistory = []; // Har bir savolning javob tarixi
+
+      const menuScreen = document.getElementById("menu-screen");
+      const quizScreen = document.getElementById("quiz-screen");
+      const resultScreen = document.getElementById("result-screen");
+      const topicsList = document.getElementById("topics-list");
+      const questionText = document.getElementById("question-text");
+      const optionsContainer = document.getElementById("options-container");
+      const counter = document.getElementById("counter");
+      const progressBar = document.getElementById("progress-bar");
+      const finalScoreText = document.getElementById("final-score-text");
+      const statusIcon = document.getElementById("result-status-icon");
+      const mistakesContainer = document.getElementById("mistakes-container");
+      const progressDots = document.getElementById("progress-dots");
+
+      // MENYUNI YUKLASH
+      function initMenu() {
+        selectedTopic = null;
+        topicsList.innerHTML = "";
+        Object.keys(quizDatabase).forEach((key, index) => {
+          const topic = quizDatabase[key];
+          const btn = document.createElement("button");
+          btn.className =
+            "p-5 bg-white border-2 border-slate-200 rounded-2xl text-left hover:border-blue-400 hover:bg-blue-50 transition-all flex justify-between items-center group focus:border-blue-600 focus:ring-2 focus:ring-blue-300";
+          btn.innerHTML = `
+                    <div class="pr-4">
+                        <h3 class="font-bold text-slate-800 group-hover:text-blue-700">${topic.title}</h3>
+                        <p class="text-sm text-slate-400">${topic.questions.length} ta savol</p>
+                    </div>
+                    <div class="bg-slate-100 p-2 rounded-lg group-hover:bg-blue-100 transition-colors">
+                        <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </div>
+                `;
+          btn.onclick = () => startQuiz(key);
+          btn.setAttribute("data-topic-index", index);
+          topicsList.appendChild(btn);
+        });
+        document.addEventListener("keydown", handleMenuNavigation);
+      }
+
+      // MENYU NAVIGATSIYASI (STRELKA VA ENTER)
+      function handleMenuNavigation(e) {
+        if (!menuScreen.classList.contains("hidden")) {
+          const buttons = topicsList.querySelectorAll("button");
+          let currentIndex = selectedTopic !== null ? selectedTopic : -1;
+
+          if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+            e.preventDefault();
+            currentIndex = (currentIndex + 1) % buttons.length;
+            selectedTopic = currentIndex;
+            buttons[currentIndex].focus();
+            buttons[currentIndex].classList.add("ring-2", "ring-blue-400");
+          } else if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+            e.preventDefault();
+            currentIndex = (currentIndex - 1 + buttons.length) % buttons.length;
+            selectedTopic = currentIndex;
+            buttons[currentIndex].focus();
+            buttons[currentIndex].classList.add("ring-2", "ring-blue-400");
+          } else if (e.key === "Enter" && currentIndex !== -1) {
+            e.preventDefault();
+            buttons[currentIndex].click();
+          }
+        }
+      }
+
+      // QUIZNI BOSHLASH
+      function startQuiz(key) {
+        isMixedTest = false;
+        currentTopicKey = key;
+        currentIdx = 0;
+        score = 0;
+        mistakesList = [];
+        questionStatuses = [];
+        answerHistory = [];
+        currentQuestions = shuffleArray(
+          randomizeQuestions(quizDatabase[currentTopicKey].questions),
+        );
+        answerHistory = new Array(currentQuestions.length).fill(null);
+        initProgressDots();
+        menuScreen.classList.add("hidden");
+        resultScreen.classList.add("hidden");
+        quizScreen.classList.remove("hidden");
+        quizScreen.classList.add("flex");
+        document.removeEventListener("keydown", handleMenuNavigation);
+        loadQuestion();
+      }
+
+      // MIXRIJ TEST QUIZNI BOSHLASH
+      function startMixedTest() {
+        isMixedTest = true;
+        currentTopicKey = "mixedTest";
+        currentIdx = 0;
+        score = 0;
+        mistakesList = [];
+        questionStatuses = [];
+        answerHistory = [];
+
+        const allQuestions = [];
+        const topicKeys = Object.keys(quizDatabase);
+
+        topicKeys.forEach((key) => {
+          const questions = quizDatabase[key].questions;
+          const selected = getRandomQuestions(questions, 3);
+          allQuestions.push(...selected);
+        });
+
+        while (allQuestions.length < 40) {
+          const randomKey =
+            topicKeys[Math.floor(Math.random() * topicKeys.length)];
+          const questions = quizDatabase[randomKey].questions;
+          const selected = getRandomQuestions(questions, 1);
+          allQuestions.push(...selected);
+        }
+
+        currentQuestions = shuffleArray(
+          randomizeQuestions(allQuestions.slice(0, 40)),
+        );
+        answerHistory = new Array(currentQuestions.length).fill(null);
+
+        initProgressDots();
+        menuScreen.classList.add("hidden");
+        resultScreen.classList.add("hidden");
+        quizScreen.classList.remove("hidden");
+        quizScreen.classList.add("flex");
+        document.removeEventListener("keydown", handleMenuNavigation);
+        loadQuestion();
+      }
+
+      // BAJARILGANLIK DOTSLARINI YUKLASH
+      function initProgressDots() {
+        progressDots.innerHTML = "";
+        for (let i = 0; i < currentQuestions.length; i++) {
+          const dot = document.createElement("div");
+          dot.className =
+            "w-4 h-4 rounded-full bg-slate-300 transition-all cursor-pointer hover:scale-125";
+          dot.setAttribute("data-question", i);
+          dot.onclick = () => goToQuestion(i);
+          progressDots.appendChild(dot);
+        }
+        questionStatuses = new Array(currentQuestions.length).fill("pending");
+        updateProgressDots();
+      }
+
+      // DOTSLARNI YANGILASH
+      function updateProgressDots() {
+        const dots = progressDots.querySelectorAll("div");
+        dots.forEach((dot, i) => {
+          dot.classList.remove(
+            "bg-slate-300",
+            "bg-green-500",
+            "bg-red-500",
+            "ring-2",
+            "ring-blue-400",
+          );
+
+          if (i === currentIdx) {
+            dot.classList.add("ring-2", "ring-blue-400", "bg-blue-500");
+          } else if (questionStatuses[i] === "correct") {
+            dot.classList.add("bg-green-500");
+          } else if (questionStatuses[i] === "wrong") {
+            dot.classList.add("bg-red-500");
+          } else {
+            dot.classList.add("bg-slate-300");
+          }
+        });
+      }
+
+      // SAVOL RAQAMIGA O'TISH
+      function goToQuestion(idx) {
+        currentIdx = idx;
+        canAnswer = true;
+        selectedOption = -1;
+        loadQuestion();
+        updateProgressDots();
+      }
+
+      // KEYINGI JAVOBSIZ SAVOL
+      function nextUnansweredQuestion() {
+        const nextIdx = questionStatuses.findIndex((s) => s === "pending");
+        if (nextIdx !== -1) {
+          goToQuestion(nextIdx);
+        } else {
+          // BARCHA SAVOLLAR TUGALLANDI
+          finishQuiz();
+        }
+      }
+
+      function loadQuestion() {
+        canAnswer = true;
+        selectedOption = -1;
+        const qData = currentQuestions[currentIdx];
+
+        progressBar.style.width = `${(currentIdx / currentQuestions.length) * 100}%`;
+        counter.innerText = `${currentIdx + 1} / ${currentQuestions.length}`;
+        questionText.innerText = qData.q.replace(/\[.*?\]/g, "");
+
+        optionsContainer.innerHTML = "";
+        qData.options.forEach((opt, i) => {
+          const btn = document.createElement("button");
+          const isAnswered = answerHistory[currentIdx] !== null;
+          const isSelected = answerHistory[currentIdx] === i;
+
+          let btnClass =
+            "option-card p-4 rounded-xl border-2 text-left flex items-start transition-all bg-white shadow-sm focus:ring-2 focus:ring-blue-400";
+
+          if (isAnswered) {
+            const correct = currentQuestions[currentIdx].correct;
+            if (i === correct) {
+              btnClass += " border-green-500 bg-green-50";
+            } else if (isSelected) {
+              btnClass += " border-red-400 bg-red-50";
+            } else {
+              btnClass += " border-slate-100 opacity-50 cursor-not-allowed";
+            }
+          } else {
+            btnClass +=
+              " border-slate-100 hover:border-blue-200 cursor-pointer";
+          }
+
+          btn.className = btnClass;
+          btn.innerHTML = `
+                    <span class="w-7 h-7 rounded-lg text-slate-500 flex items-center justify-center text-xs font-bold mr-4 mt-0.5 shrink-0 transition-colors ${isAnswered && (i === currentQuestions[currentIdx].correct ? "bg-green-500 text-white" : isSelected ? "bg-red-500 text-white" : "bg-slate-100")}">${String.fromCharCode(65 + i)}</span>
+                    <span class="text-slate-700 font-medium leading-relaxed">${opt}</span>
+                `;
+
+          if (!isAnswered) {
+            btn.onclick = () => handleAnswer(i, btn);
+          }
+
+          btn.setAttribute("data-index", i);
+          optionsContainer.appendChild(btn);
+        });
+
+        updateProgressDots();
+        document.addEventListener("keydown", handleQuizNavigation);
+      }
+
+      function handleQuizNavigation(e) {
+        const isAnswered = answerHistory[currentIdx] !== null;
+        const buttons = optionsContainer.querySelectorAll(".option-card");
+        const totalOptions = buttons.length;
+
+        // ⬆️⬇️ TEPA VA PAST STRELKALAR - VARIANTLAR ORASIDA NAVIGATSIYA
+        if (e.key === "ArrowUp") {
+          e.preventDefault();
+          if (!isAnswered) {
+            selectedOption = (selectedOption - 1 + totalOptions) % totalOptions;
+            updateOptionHighlight(buttons);
+          }
+          return;
+        } else if (e.key === "ArrowDown") {
+          e.preventDefault();
+          if (!isAnswered) {
+            selectedOption = (selectedOption + 1) % totalOptions;
+            updateOptionHighlight(buttons);
+          }
+          return;
+        }
+
+        // ⬅️ CHAP STRELKA - OLDINGI JAVOBSIZ SAVOL
+        if (e.key === "ArrowLeft") {
+          e.preventDefault();
+          let prevIdx = currentIdx - 1;
+          while (prevIdx >= 0 && questionStatuses[prevIdx] !== "pending") {
+            prevIdx--;
+          }
+          if (prevIdx >= 0) {
+            goToQuestion(prevIdx);
+          }
+          return;
+        }
+
+        // ➡️ O'NG STRELKA - KEYINGI JAVOBSIZ SAVOL
+        if (e.key === "ArrowRight") {
+          e.preventDefault();
+          let nextIdx = currentIdx + 1;
+          while (
+            nextIdx < questionStatuses.length &&
+            questionStatuses[nextIdx] !== "pending"
+          ) {
+            nextIdx++;
+          }
+          if (nextIdx < questionStatuses.length) {
+            goToQuestion(nextIdx);
+          }
+          return;
+        }
+
+        // SPACE - KEYINGI JAVOBSIZ SAVOLGA O'TISH
+        if (e.code === "Space") {
+          e.preventDefault();
+          nextUnansweredQuestion();
+          return;
+        }
+
+        // 1-4 RAQAMLARI BILAN JAVOB TANLASH
+        if (!isAnswered) {
+          const key = parseInt(e.key);
+          if (key >= 1 && key <= 4 && key <= totalOptions) {
+            selectedOption = key - 1;
+            updateOptionHighlight(buttons);
+            return;
+          }
+        }
+
+        // ENTER BILAN JAVOB TANLASH
+        if (e.key === "Enter" && selectedOption !== -1 && !isAnswered) {
+          e.preventDefault();
+          buttons[selectedOption].click();
+          return;
+        }
+
+        // ESC BILAN MENYU
+        if (e.key === "Escape") {
+          e.preventDefault();
+          showMenu();
+          return;
+        }
+      }
+
+      function updateOptionHighlight(buttons) {
+        buttons.forEach((btn, index) => {
+          btn.classList.remove("ring-2", "ring-blue-400", "border-blue-400");
+        });
+        if (selectedOption >= 0 && selectedOption < buttons.length) {
+          buttons[selectedOption].classList.add(
+            "ring-2",
+            "ring-blue-400",
+            "border-blue-400",
+          );
+          buttons[selectedOption].scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+          });
+        }
+      }
+
+      function handleAnswer(i, btn) {
+        if (answerHistory[currentIdx] !== null) return;
+
+        answerHistory[currentIdx] = i;
+        const correct = currentQuestions[currentIdx].correct;
+        const isCorrect = i === correct;
+
+        if (isCorrect) {
+          score++;
+          questionStatuses[currentIdx] = "correct";
+        } else {
+          questionStatuses[currentIdx] = "wrong";
+          // XATO SAVOLNI SAQLASH
+          mistakesList.push({
+            questionNumber: currentIdx + 1,
+            question: currentQuestions[currentIdx].q.replace(/\[.*?\]/g, ""),
+            userAnswer: currentQuestions[currentIdx].options[i],
+            correctAnswer: currentQuestions[currentIdx].options[correct],
+          });
+        }
+
+        // SAVOLNI QAYTA YUKLASH (JAVOB KO'RISH UCHUN)
+        loadQuestion();
+        updateProgressDots();
+
+        // AVTOMATIK KEYINGI JAVOBSIZ SAVOLGA O'TISH (BOSHIGA EMAS!)
+        const delayTime = isCorrect ? 1500 : 3000;
+        setTimeout(() => {
+          // Keyingi javobsiz savolni topish
+          let nextIdx = currentIdx + 1;
+          while (
+            nextIdx < questionStatuses.length &&
+            questionStatuses[nextIdx] !== "pending"
+          ) {
+            nextIdx++;
+          }
+
+          // Agar javobsiz savol topilsa, unga o'tish
+          if (nextIdx < questionStatuses.length) {
+            goToQuestion(nextIdx);
+          } else {
+            // BARCHA SAVOLLAR TUGALLANDI DEGAN SINASH
+            const unansweredCount = questionStatuses.filter(
+              (s) => s === "pending",
+            ).length;
+
+            if (unansweredCount === 0) {
+              // HAQIQATAN HAM BARCHA SAVOLLAR TUGALLANDI
+              finishQuiz();
+            } else {
+              // JAVOBSIZ SAVOLLAR QO'LGAN, ULARNI TO'LDIRISH KERAK
+              const firstUnanswered = questionStatuses.findIndex(
+                (s) => s === "pending",
+              );
+              if (firstUnanswered !== -1) {
+                goToQuestion(firstUnanswered);
+              }
+            }
+          }
+        }, delayTime);
+      }
+
+      function showMenu() {
+        quizScreen.classList.add("hidden");
+        quizScreen.classList.remove("flex");
+        resultScreen.classList.add("hidden");
+        menuScreen.classList.remove("hidden");
+        document.removeEventListener("keydown", handleQuizNavigation);
+        initMenu();
+      }
+
+      // QUIZNI TAMOMLASH
+      function finishQuiz() {
+        progressBar.style.width = "100%";
+        quizScreen.classList.add("hidden");
+        quizScreen.classList.remove("flex");
+        resultScreen.classList.remove("hidden");
+        resultScreen.classList.add("flex");
+        document.removeEventListener("keydown", handleQuizNavigation);
+
+        const total = currentQuestions.length;
+        const percent = Math.round((score / total) * 100);
+
+        if (percent >= 80) {
+          statusIcon.className =
+            "mb-6 p-4 rounded-full bg-green-100 text-green-600";
+          statusIcon.innerHTML = `<svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
+        } else if (percent >= 50) {
+          statusIcon.className =
+            "mb-6 p-4 rounded-full bg-blue-100 text-blue-600";
+          statusIcon.innerHTML = `<svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
+        } else {
+          statusIcon.className =
+            "mb-6 p-4 rounded-full bg-red-100 text-red-600";
+          statusIcon.innerHTML = `<svg class="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>`;
+        }
+
+        finalScoreText.innerHTML = `Siz jami <b>${total}</b> ta savoldan <b>${score}</b> tasini to'g'ri topdingiz.<br><span class="text-2xl font-extrabold mt-2 block ${percent >= 60 ? "text-green-600" : "text-red-600"}">Natija: ${percent}%</span>`;
+
+        // XATO SAVOLLARNI KO'RSATISH
+        displayMistakes();
+      }
+
+      function displayMistakes() {
+        mistakesContainer.innerHTML = "";
+
+        if (mistakesList.length === 0) {
+          mistakesContainer.innerHTML =
+            "<p class=\"text-green-600 font-bold text-center\">🎉 Barcha savollarni to'g'ri topdingiz!</p>";
+          return;
+        }
+
+        const title = document.createElement("h3");
+        title.className =
+          "text-xl font-bold text-red-600 mb-4 text-center w-full";
+        title.innerText = `❌ Xato qilgan savollar (${mistakesList.length})`;
+        mistakesContainer.appendChild(title);
+
+        mistakesList.forEach((mistake) => {
+          const card = document.createElement("div");
+          card.className =
+            "mb-4 p-4 bg-red-50 border-l-4 border-red-500 rounded-lg w-full";
+          card.innerHTML = `
+                    <div class="mb-2">
+                        <span class="bg-red-500 text-white px-3 py-1 rounded text-sm font-bold">${mistake.questionNumber}-savol</span>
+                    </div>
+                    <p class="text-slate-800 font-semibold mb-3">${mistake.question}</p>
+                    <div class="space-y-2">
+                        <div class="p-2 bg-red-100 border border-red-300 rounded">
+                            <span class="text-red-700 text-sm font-bold">❌ Sizning javob:</span>
+                            <p class="text-red-700">${mistake.userAnswer}</p>
+                        </div>
+                        <div class="p-2 bg-green-100 border border-green-300 rounded">
+                            <span class="text-green-700 text-sm font-bold">✅ To'g'ri javob:</span>
+                            <p class="text-green-700">${mistake.correctAnswer}</p>
+                        </div>
+                    </div>
+                `;
+          mistakesContainer.appendChild(card);
+        });
+      }
+
+      function getRandomQuestions(questions, count) {
+        const shuffled = shuffleArray(questions);
+        return shuffled.slice(0, count);
+      }
+
+      function restartTopic() {
+        if (isMixedTest) {
+          startMixedTest();
+        } else {
+          startQuiz(currentTopicKey);
+        }
+      }
+
+      window.onload = initMenu;
+    </script>
+  </body>
+</html>
