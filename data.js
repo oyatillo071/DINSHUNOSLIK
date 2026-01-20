@@ -1503,4 +1503,816 @@ const quizDatabase = {
       },
     ]),
   },
+  topic6: {
+    title: "6-Bo'lim",
+    questions: randomizeQuestions([
+      {
+        q: "Din va fan o‘rtasidagi munosabat zamonaviy qomuslarda qanday talqin qilinadi?",
+        options: [
+          "Fan va din bir-birini inkor etuvchi, borliqning moddiy va ma'naviy qismlarini ajratuvchi qarama-qarshi qutblardir.",
+          "Fan borliqning fizik qonuniyatlarini, din esa hayotning mazmuni va axloqiy tamoyillarini o‘rganuvchi to‘ldiruvchi omillardir.",
+          "Islom ta'limotiga ko'ra, fan va din insoniyat intellektual hayotining faqatgina nazariy jihatlarini yoritishga xizmat qiladi.",
+          "Fan faqatgina 'Nima uchun?' savoliga, din esa tabiat hodisalarining 'Qanday?' sodir bo'lishiga javob beruvchi tizimlardir.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Diniy ekstremizm tushunchasining tub mohiyati qaysi javobda to‘g‘ri ko‘rsatilgan?",
+        options: [
+          "Diniy aqidalarni o‘ta radikal va ashaddiy talqin qilish orqali o‘z qarashlarini boshqalarga zo‘rlik bilan o‘tkazishga intilish.",
+          "Jamiyatdagi ijtimoiy-siyosiy muammolarni hal qilishda diniy qadriyatlardan va milliy an'analardan unumli foydalanish.",
+          "Muayyan diniy guruhlarning o‘z e'tiqodlarini himoya qilish maqsadida jamiyatdan va dunyoviy hayotdan butunlay ajralib chiqishi.",
+          "Dindagi mavjud an'anaviy qarashlarni zamonaviy talablar asosida isloh qilish va ularni siyosiy manfaatlar yo'lida qo'llash.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Radikalizm va ekstremizm o‘rtasidagi asosiy farq nimadan iborat?",
+        options: [
+          "Radikalizm faqat siyosiy sohadagi keskinlikni anglatadi, ekstremizm esa faqat diniy sohadagi buzg'unchi harakatlardir.",
+          "Ekstremizm — bu g'oyaviy qarashlar darajasidagi keskinlik, radikalizm esa ushbu g'oyalarning amaliyotga ko'chgan shaklidir.",
+          "Radikalizm — keskin choralarni yoqlash (qarashlar darajasidа), ekstremizm esa bu qarashlarning tajovuzkor harakatlarga ko'chishidir.",
+          "Har ikkala tushuncha ham mohiyatan bir xil bo'lib, ular orasida na huquqiy va na mafkuraviy jihatdan hech qanday farq mavjud emas.",
+        ],
+        correct: 2,
+      },
+      {
+        q: "Terrorizmning diniy niqob ostida namoyon bo‘lishining asosiy sabablari qaysilar?",
+        options: [
+          "Diniy bilimsizlik, muqaddas matnlarni noto‘g‘ri talqin qilish va siyosiy manfaatlarni din orqali oqlashga urinish.",
+          "Global miqyosda turli din vakillari o'rtasida e'tiqodiy qarama-qarshiliklarning keskinlashishi va madaniyatsizlik.",
+          "Diniy tashkilotlarning davlat boshqaruvidan chetlatilishi va jamiyatda dunyoviy ta'limning o'ta kuchayib ketishi.",
+          "Xalqaro terroristik tashkilotlarning faqatgina iqtisodiy resurslarni qo'lga kiritish maqsadida dindan foydalanishi.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Yoshlarning ekstremistik g‘oyalarga berilib ketishiga sabab bo‘luvchi psixologik-ijtimoiy omillar qaysi?",
+        options: [
+          "Diniy savodxonlikning yuqoriligi, oilaviy muhitning haddan tashqari barqarorligi va jamiyatdagi ijtimoiy adolat.",
+          "Internetdagi manipulyatsiyalar, diniy savodsizlik va 'haqiqat izlash' jarayonida shubhali manbalarga duch kelish.",
+          "Zamonaviy ta'lim muassasalarida diniy fanlarning o'tilmasligi va yoshlarning faqat dunyoviy bilimlar bilan cheklanishi.",
+          "Chet tillarini mukammal bilmaslik natijasida xalqaro axborot maydonidagi ma'lumotlarni tahlil qila olmaslik.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Diniy mutaassiblikning ijtimoiy oqibatlari jamiyat hayotiga qanday ta'sir ko'rsatadi?",
+        options: [
+          "Jamiyatning jipslashishi, diniy qadriyatlarning yanada mustahkamlanishi va ma'naviy yuksalishning tezlashishi.",
+          "Fuqarolarning diniy huquqlari cheklanishi va davlatning din ishlariga aralashuvi natijasida yuzaga keladigan norozilik.",
+          "Jamiyatning parchalanishi, boshqa din vakillariga nisbatan nafrat uyg‘onishi va barqarorlikning tizimli buzilishi.",
+          "Ijtimoiy-iqtisodiy munosabatlarning yaxshilanishi va milliy an'analarning diniy aqidalar bilan uyg'unlashishi.",
+        ],
+        correct: 2,
+      },
+      {
+        q: "Diniy bag‘rikenglikni mustahkamlashda zamonaviy ta’limning roli nimadan iborat?",
+        options: [
+          "Yoshlarda tanqidiy fikrlashni shakllantirish, turli madaniyatlar haqida xolis ma’lumot berish va muloqot madaniyatini o‘rgatish.",
+          "Faqatgina muayyan bir dinning ustunligini isbotlash orqali yoshlarda boshqa dinlarga nisbatan himoya hissini shakllantirish.",
+          "Ta'lim oluvchilarni diniy masalalardan butunlay uzoqlashtirish va ularni faqatgina texnik innovatsiyalarga yo'naltirish.",
+          "Dunyoviy qonunlarning diniy qonunlardan ustunligini uzoq yillik tarixiy tajribalar va misollar orqali majburiy singdirish.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Ommaviy axborot vositalarining diniy savodxonlikni oshirishdagi asosiy vazifasi nima?",
+        options: [
+          "Diniy arboblarning shaxsiy hayotini yoritish va ularning jamiyatdagi nufuzini oshirishga xizmat qiluvchi materiallar tayyorlash.",
+          "Xalqqa xolis diniy ma’lumotlarni yetkazish, aqidaparastlikning zararli mohiyatini ochish va totuvlikni targ‘ib qilish.",
+          "Internet tarmog'idagi barcha diniy kontentlarni bloklash va faqatgina davlat tomonidan tasdiqlangan ma'lumotlarni tarqatish.",
+          "Turli diniy konfessiyalar o'rtasidagi aqidaviy farqlarni batafsil tahlil qilish orqali bahs-munozara maydonini yaratish.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Internetda diniy targ‘ibotning xavfli jihatlari qaysi javobda to‘liq ko‘rsatilgan?",
+        options: [
+          "Ma’lumotlarning tekshirilmaganligi, hissiyotga asoslangan 'miyani yuvish' va ekstremistik materiallarning tez tarqalishi.",
+          "Diniy ma'lumotlarning haddan tashqari ko'pligi va ularni o'rganish uchun ko'p vaqt sarflanishi natijasida yuzaga keladigan charchoq.",
+          "Ijtimoiy tarmoqlarda diniy guruhlarning o'zaro fikr almashishi va an'anaviy islom qadriyatlarining keng targ'ib qilinishi.",
+          "Internet tezligining pastligi va barcha fuqarolarning ham diniy mazmundagi elektron resurslardan foydalana olmasligi.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Diniy sohada profilaktik ishlar qaysi tamoyil asosida olib borilishi samarali hisoblanadi?",
+        options: [
+          "Faqatgina ma'muriy jazo choralarini qo'llash va ekstremistik g'oyalarga moyil shaxslarni jamiyatdan ajratib qo'yish orqali.",
+          "'Jaholatga qarshi ma’rifat' tamoyili asosida tushuntirish, muloqot va sog‘lom diniy muhitni yaratish orqali.",
+          "Yoshlarning diniy ehtiyojlarini cheklash va ularni majburiy ravishda faqat sport va madaniyat tadbirlariga jalb qilish orqali.",
+          "Diniy ta'lim muassasalarini yopish va barcha diniy marosimlarni faqat mahalla nazorati ostida o'tkazishni joriy etish orqali.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Davlatning ekstremizmga qarshi siyosati ustuvor ravishda nimaga qaratilgan?",
+        options: [
+          "Diniy tashkilotlar faoliyatini to'liq to'xtatish va jamiyatda faqat dunyoviy mafkurani majburiy targ'ib qilishga.",
+          "Konstitutsiyaviy tuzumni himoya qilish, tinchlikni ta’minlanish va buzg‘unchi g‘oyalar tarqalishining oldini olishga.",
+          "Faqatgina xorijiy davlatlardan kelayotgan diniy adabiyotlarni nazorat qilish va chegaralarda bojxona nazoratini kuchaytirishga.",
+          "Fuqarolarning vijdon erkinligi huquqini cheklash orqali barcha diniy jarayonlarni davlat organlariga bo'ysundirishga.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Fuqarolik jamiyati institutlarining (NNT, Mahalla) ekstremizmga qarshi kurashdagi vazifasi nima?",
+        options: [
+          "Huquqbuzarlik sodir etgan shaxslarni aniqlash va ularga nisbatan sud qarorisiz ma'muriy jazo choralarini qo'llash.",
+          "Ijtimoiy nazoratni o‘rnatish, muammoli oilalarga yordam berish va sog‘lom turmush tarzini keng targ‘ib qilish.",
+          "Diniy ta'lim muassasalari uchun o'quv dasturlarini ishlab chiqish va ularni davlat organlari bilan kelishish.",
+          "Faqatgina diniy bayramlarni tashkil etish va aholi o'rtasida xayriya tadbirlarini o'tkazish bilan cheklanish.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Oila muhitining diniy tarbiyadagi va mafkuraviy himoyadagi ahamiyati qanday?",
+        options: [
+          "Oila faqat iqtisodiy ta'minot manbai bo'lib, bolaning diniy dunyoqarashi faqat maktab va jamoat joylarida shakllanadi.",
+          "Ota-onaning dunyoqarashi va bergan tarbiyasi bolaning yot g'oyalarga qarshi diniy 'immuniteti' bo'lib xizmat qiladi.",
+          "Diniy tarbiya faqat maxsus ta'lim muassasalarida berilishi kerak, oilada bu haqda gapirish bolaning dunyoviy rivojlanishiga xalaqit beradi.",
+          "Oiladagi diniy muhit qanchalik qat'iy va cheklovlarga boy bo'lsa, bolaning ekstremistik g'oyalarga qarshi chidamliligi shunchalik ortadi.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Mahalla institutining yoshlarni 'yot g‘oyalar'dan asrashdagi roli qaysi javobda to‘g‘ri ifodalangan?",
+        options: [
+          "Yoshlarning har bir qadamini nazorat qilish va ularning shaxsiy hayotiga aralashish orqali xavfni bartaraf etish.",
+          "Yoshlarning xulqini kuzatish, jamoat ishlariga jalb qilish va adashganlarni sog‘lom hayotga qaytarishda ko‘maklashish.",
+          "Faqatgina profilaktik hisobda turgan yoshlar bilan ishlash va ularni doimiy ravishda huquq-tartibot organlariga hisobot berishga majburlash.",
+          "Mahalla hududidagi barcha yoshlarning internetdan foydalanishini cheklash va ularni faqat jismoniy mehnatga yo'naltirish.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Diniy ta’lim muassasalari oldida turgan dolzarb vazifa qaysi variantda ko'rsatilgan?",
+        options: [
+          "Faqatgina o'tmishdagi diniy manbalarni yodlatish va zamonaviy dunyoviy fanlarni o'qitishdan butunlay voz kechish.",
+          "Zamon talablariga javob beradigan, ham diniy, ham dunyoviy bilimlarni chuqur egallagan kadrlar tayyorlash.",
+          "Diniy xizmatchilarni faqatgina marosimlarni o'tkazishga tayyorlash va ularning ijtimoiy faolligini pasaytirish.",
+          "Xalqaro diniy markazlarning barcha o'quv dasturlarini o'zgartirishsiz mahalliy ta'lim tizimiga joriy etish.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Imom-xatib va diniy ulamolarning jamiyat barqarorligidagi asosiy mas’uliyati nimadan iborat?",
+        options: [
+          "Xalqqa sof islom ta’limotini yetkazish, adashganlarni yo‘lga solish va ma’naviy barqarorlikni saqlash.",
+          "Faqatgina diniy adabiyotlarni nashr etish va ularni aholi o'rtasida pullik asosda tarqatish ishlarini tashkil qilish.",
+          "Davlat boshqaruvi organlarining ishiga aralashish va qonun chiqaruvchi hokimiyatda diniy qoidalarni joriy etish.",
+          "Jamiyatdagi barcha ijtimoiy muammolarni faqatgina duolar va diniy marosimlar orqali hal qilishga chaqirish.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Soxta diniy targ‘ibotning asosiy belgilariga nimalar kiradi?",
+        options: [
+          "Jamiyatda tinchlikni targ'ib qilish, milliy qadriyatlarni hurmat qilish va boshqa mazhablarga nisbatan bag'rikeng bo'lish.",
+          "Boshqalarni kofirlikda ayblash (takfir), davlat qonunlariga qarshi chiqish va faqat o‘zlarini 'haq yo‘lda' deb bilish.",
+          "Ilm-fanni o'rganishga chaqirish, zamonaviy texnologiyalardan din yo'lida foydalanish va xayriya ishlarini ko'paytirish.",
+          "Diniy matnlarni tarixiy kontekstda o'rganish va ularni bugungi kun ijtimoiy hayotiga moslashtirishga harakat qilish.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "An’anaviy islom tushunchasi nimani anglatadi?",
+        options: [
+          "Islom dinining shakllanish davridagi barcha qonun-qoidalarni bugungi kunda ham aynan, o'zgarishsiz qo'llashni.",
+          "Muayyan mintaqada asrlar davomida shakllangan, mahalliy urf-odatlar bilan uyg‘unlashgan va radikalizmga begona tushuncha.",
+          "Faqatgina arab davlatlari uchun xos bo'lgan va boshqa xalqlar madaniyatini inkor etuvchi sof diniy qarashlar majmuasi.",
+          "Diniy aqidalarni siyosiy maqsadlar yo'lida o'zgartirgan va xalqaro tashkilotlar tomonidan e'tirof etilgan yangi diniy oqim.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "An’anaviy islomning asosiy xususiyatlari qaysi javobda to'g'ri sanab o'tilgan?",
+        options: [
+          "Motalidlik (vazminlik), bag‘rikenglik, mazhablarga amal qilish va milliy qadriyatlarni hurmat qilish.",
+          "Qat'iy aqidaparastlik, boshqa din vakillarini inkor etish va faqatgina o'z mazhabini ustun deb hisoblash.",
+          "Dunyoviy hayotdan butunlay voz kechish, faqat oxirat amallari bilan band bo'lish va ilm-fanni rad etish.",
+          "Siyosiy radikalizmga moyillik, milliy urf-odatlarni dindan tashqari deb hisoblash va ularga qarshi kurashish.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Markaziy Osiyoda an’anaviy islom shakllanishiga ta’sir ko‘rsatgan fundamental omillar qaysilar?",
+        options: [
+          "Faqatgina hududning iqlim sharoiti va aholining ko'chmanchi hayot tarzidan o'troq hayotga o'tish jarayoni.",
+          "Ipak yo‘lidagi madaniy almashinuvlar, buyuk mutafakkirlar merosi va Hanafiya mazhabining keng qamrovliligi.",
+          "Xorijiy bosqinlar natijasida majburiy singdirilgan diniy qarashlar va mahalliy aholining e'tiqodiy qarshiliklari.",
+          "Mintaqadagi tabiiy boyliklar uchun kurash va diniy markazlarning iqtisodiy manfaatlar yo'lidagi o'zaro kelishuvlari.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Hanafiya mazhabining Markaziy Osiyo mintaqasida keng tarqalishining fundamental sababi nima?",
+        options: [
+          "Inson huquqlariga e’tiborliligi, mantiqiy yondashuvning ustuvorligi va mahalliy urf-odatlarga (urf tamoyili) tolerantligi.",
+          "Mintaqadagi siyosiy rahbarlarning faqat ushbu mazhab vakillariga davlat lavozimlarini berish haqidagi qat'iy talabi.",
+          "Boshqa mazhablarga nisbatan ibodat amallarining o'ta soddaligi va barcha diniy manbalarning faqat mahalliy tilda yozilganligi.",
+          "Arab xalifaligi davrida mintaqaga kelgan barcha ulamolarning faqat Hanafiya huquqiy maktabiga mansub bo'lganligi.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Imom Moturidiy asos solgan moturidiylik ta'limotining mintaqa ma'naviy hayotidagi o'rni qanday baholanadi?",
+        options: [
+          "Islom aqidasini faqatgina hissiy va botiniy kechinmalar orqali tushuntirishga harakat qilib, ilmiy yondashuvni cheklagan.",
+          "Diniy qarashlarni davlat siyosatiga to'liq bo'ysundirish va ijtimoiy hayotda faqatgina dunyoviy qonunlarni ustuvor deb bilish.",
+          "Islom aqidasini aql va naql (Qur’on va Sunnat) asosida tizimlashtirib, mintaqada aqidaviy barqarorlikni ta’minlagan.",
+          "Mavjud barcha diniy nizolarni faqatgina huquqiy normalar orqali hal qilishni taklif etgan mantiqiy tizim hisoblanadi.",
+        ],
+        correct: 2,
+      },
+      {
+        q: "Hanafiylikdagi 'Urf' tushunchasi mahalliy an'analar va din uyg'unligini qanday ta'minlagan?",
+        options: [
+          "Shariatga zid bo‘lmagan milliy an’analar diniy hayotning ajralmas qismi sifatida qabul qilinishiga zamin yaratgan.",
+          "Milliy urf-odatlarning shariat qoidalaridan ustun ekanligini e'tirof etib, dinni millatga moslashtirishga xizmat qilgan.",
+          "Mahalliy an'analarni vaqtinchalik qabul qilib, keyinchalik ularni butunlay islomiy qoidalar bilan almashtirishni nazarda tutgan.",
+          "Diniy marosimlarni faqat milliy qadriyatlar asosida o'tkazishni va shariatning qat'iy ko'rsatmalaridan voz kechishni anglatgan.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "O'zbek xalqining milliy o'zligi va islomiy qadriyatlar bog'liqligi qaysi jihatlarda ko'proq namoyon bo'ladi?",
+        options: [
+          "Faqatgina diniy bayramlarni nishonlashda va masjidlar atrofida ijtimoiy yig'ilishlarni tashkil etishda.",
+          "Til, adabiyot, san’at va kundalik hayot tarzining islomiy tamoyillar bilan chambarchas bog‘liq holda shakllanganligida.",
+          "Mintaqada faqat islom diniga xos bo'lgan me'moriy obidalarning saqlanib qolganligi va ularning davlat tomonidan muhofaza qilinishida.",
+          "Aholining barcha qatlamlari tomonidan diniy liboslarning milliy libos sifatida qabul qilinishi va ommalashuvida.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Mustaqillik yillarida O‘zbekistonda diniy sohada amalga oshirilgan islohotlarning bosh maqsadi nima?",
+        options: [
+          "Diniy tashkilotlar sonini ko'paytirish orqali mintaqada diniy markazga aylanish va siyosiy ta'sirni oshirish.",
+          "Diniy qadriyatlarni tiklash, allomalar merosini o'rganish va vijdon erkinligini qonuniy kafolatlash.",
+          "Jamiyatni to'liq diniy boshqaruv tizimiga o'tkazish va dunyoviy ta'limni diniy ta'lim bilan almashtirish.",
+          "Xalqaro tashkilotlarning talablarini bajarish maqsadida diniy sohadagi barcha cheklovlarni bir tomonlama bekor qilish.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "O‘zbekistonda faoliyat yuritayotgan konfessiyalararo totuvlikning huquqiy asosi qaysi javobda to'g'ri ko'rsatilgan?",
+        options: [
+          "Faqatgina diniy konfessiyalar kengashining ichki nizomi va diniy arboblarning o'zaro kelishuvi.",
+          "Xalqaro huquqiy normalarning mahalliy qonunchilikdan ustunligi haqidagi deklarativ hujjatlar.",
+          "'Vijdon erkinligi va diniy tashkilotlar to'g'risida'gi qonun va Konstitutsiyaviy normalar.",
+          "Diniy tashkilotlarning davlat organlaridan to'liq mustaqilligi haqidagi ijtimoiy shartnoma tamoyillari.",
+        ],
+        correct: 2,
+      },
+      {
+        q: "O‘zbekistondagi diniy bag‘rikenglik siyosatining o'ziga xos jihati nimada?",
+        options: [
+          "Barcha din vakillariga teng huquqlar berish, dinlararo muloqot va millatlararo totuvlikni davlat darajasida qo'llashda.",
+          "Faqatgina islom dini vakillari uchun maxsus imtiyozlar yaratish va boshqa dinlarni e'tibordan chetda qoldirishda.",
+          "Jamiyatdagi barcha diniy jarayonlarni faqat huquq-tartibot organlari nazorati ostida amalga oshirishda.",
+          "Diniy bag'rikenglikni faqat turizm salohiyatini oshirish vositasi sifatida qo'llash va uni targ'ib qilishda.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Dinlararo muloqot nima uchun zamonaviy jamiyat barqarorligi uchun muhim omil hisoblanadi?",
+        options: [
+          "Diniy qarashlar o'rtasidagi aqidaviy farqlarni butunlay yo'qotish va yagona jahon dinini yaratish uchun.",
+          "O‘zaro ishonchni mustahkamlash, nizolarning oldini olish va umuminsoniy muammolarni birgalikda hal qilish uchun.",
+          "Turli din vakillarini siyosiy maqsadlar yo'lida birlashtirish va ulardan saylov jarayonlarida foydalanish uchun.",
+          "Diniy tashkilotlar o'rtasida iqtisodiy raqobatni kuchaytirish va ularning moliyaviy barqarorligini ta'minlash uchun.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Xalqaro hamjamiyat O‘zbekistonning diniy sohadagi islohotlarini qanday mezon asosida ijobiy baholagan?",
+        options: [
+          "Aholining barcha qatlamlarini majburiy diniy ta'limga jalb qilgani va yangi madrasalar ochgani uchun.",
+          "O‘zbekistonning 'alohida xavotirdagi davlatlar' ro‘yxatidan chiqarilishi va diniy erkinlikning ta'minlanishi asosida.",
+          "Faqatgina diniy turizm sohasida erishilgan iqtisodiy natijalar va xorijiy investitsiyalarning jalb qilinishi bilan.",
+          "Diniy adabiyotlarning senzurasiz nashr etilishi va barcha diniy oqimlarga cheksiz erkinlik berilganligi sababli.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Sharq uyg'onish davri (Renessans) ning yuzaga kelishida islomiy qaysi tamoyil asosiy turtki bo'lgan?",
+        options: [
+          "Faqatgina diniy matnlarni sharhlash va ularni yod olish orqali ma'naviy kamolotga erishish g'oyasi.",
+          "'Ilm izlash barcha uchun farz' degan tamoyil orqali dunyoviy va diniy bilimlarni egallashga bo'lgan intilish.",
+          "Boshqa madaniyatlarning ilmiy yutuqlarini inkor etgan holda, faqat islomiy kashfiyotlarga tayanish tamoyili.",
+          "Diniy ulamolarning siyosiy hokimiyatni boshqarishi va barcha mablag'larni ilm-fanga yo'naltirish haqidagi qarori.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Ibn Sino va al-Xorazmiy kabi allomalarning islom sivilizatsiyasidagi o'rnini qanday ifodalash mumkin?",
+        options: [
+          "Ular faqatgina diniy huquq (fiqh) sohasida asarlar yozib, islom sivilizatsiyasining huquqiy asoslarini yaratganlar.",
+          "Islom sivilizatsiyasini matematika, tibbiyot va boshqa fundamental fanlar orqali jahon madaniyati darajasiga ko'targanlar.",
+          "Faqat yunon falsafasini tarjima qilish bilan shug'ullanib, islom dunyosiga begona g'oyalarni olib kirganlar.",
+          "Diniy qarashlar va ilm-fan o'rtasida katta tafovut borligini isbotlashga harakat qilgan erkin fikrli olimlar bo'lganlar.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Qur’ondagi 'Dinda zo‘rlash yo‘q' (Baqara, 256) tamoyili islomda qanday tushuniladi?",
+        options: [
+          "Inson o'z xohishi bilan dinni tanlashi, e'tiqod erkinligi va boshqa din vakillariga nisbatan tajovuz qilmaslik asosi sifatida.",
+          "Diniy qoidalarni bajarishda sustkashlikka yo'l qo'yish mumkinligi va ibodatlarning ixtiyoriy ekanligi haqidagi ruxsat sifatida.",
+          "Faqatgina islom diniga kirganlar uchun jazo choralari qo'llanilmasligi va boshqalarga nisbatan majburlov qo'llash ruxsati sifatida.",
+          "Diniy nizolarni hal qilishda hech qanday qonuniy kuch ishlatmaslik va hamma narsani o'z holiga tashlab qo'yish tamoyili sifatida.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Islom sivilizatsiyasida 'tinchlik' (salom) tushunchasi huquqiy jihatdan qanday asoslangan?",
+        options: [
+          "Tinchlik faqatgina musulmon davlatlar o'rtasida bo'lishi kerakligi haqidagi qat'iy talab orqali.",
+          "Bir insonni asossiz o‘ldirish butun insoniyatni o‘ldirish bilan tengligi haqidagi g‘oyalar va inson hayotining muqaddasligi orqali.",
+          "Faqatgina harbiy harakatlar to'xtatilgan vaqtdagina tinchlikni saqlash lozimligi haqidagi vaqtinchalik tavsiyalar orqali.",
+          "Dunyodagi barcha insonlarni islom diniga kiritish orqali umumiy tinchlikka erishish mumkinligi haqidagi nazariya orqali.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Diniy nizolarni hal etishda 'ma'rifiy tushuntirish' ishlarining afzalligi nimada?",
+        options: [
+          "Muammoni ildizini — jaholatni bartaraf etish, muloqot va diplomatiya orqali barqaror tinchlikka erishish imkoniyatida.",
+          "Nizo tarafdorlarini qo'rqitish va ularga nisbatan diniy fatvolar orqali bosim o'tkazishning samarali yo'li ekanligida.",
+          "Diniy nizolarni dunyoviy sudlarga yetkazmasdan, faqatgina masjidlar darajasida yashirincha hal qilish imkoniyatida.",
+          "Barcha nizoli masalalarni faqat bitta din foydasiga hal qilish va boshqalarni murosaga majburlash usuli ekanligida.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Zamonaviy jamiyatda dinning 'yupatish' (psixologik madad) funksiyasi qanday namoyon bo'ladi?",
+        options: [
+          "Insonlarning real hayotiy muammolaridan qochishiga va faqat tasavvufiy dunyoga sho'ng'ishiga yordam berishida.",
+          "Og'ir damlarda insonga ma'naviy kuch berish, hayot mazmunini anglash va tushkunlikdan chiqishda ruhiy tayanch bo'lishida.",
+          "Barcha ijtimoiy va sog'liq muammolarini shifokorlarga bormasdan, faqat diniy rasm-rusumlar orqali hal qilishda.",
+          "Insonlarni jamiyatdagi tengsizlikka ko'nishga majburlash va ularni faqatgina taqdirga tan berish ruhida tarbiyalashda.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Islom sivilizatsiyasi markazi va Imom Buxoriy xalqaro ilmiy-tadqiqot markazining tashkil etilishidan ko'zlangan asosiy maqsad nima?",
+        options: [
+          "Diniy adabiyotlarni xorijga eksport qilish va mintaqada diniy kitob savdosini rivojlantirish.",
+          "Islom dinining insonparvarlik mohiyatini ilmiy asosda tadqiq etish va boy madaniy merosni xalqaro miqyosda targ'ib qilish.",
+          "Faqatgina din xizmatchilari uchun malaka oshirish kurslarini tashkil etish va ularni imtihondan o'tkazish.",
+          "Mintaqadagi barcha tarixiy obidalarni diniy tashkilotlar tasarrufiga o'tkazish va ulardan foydalanish tartibini belgilash.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "O‘zbekistonda dinlararo totuvlikning ramzi sifatida qabul qilingan 'O‘zbekiston — umumiy uyimiz' g‘oyasining mazmuni nima?",
+        options: [
+          "Mamlakatda faqat bitta millat va bitta din vakillari yashashi kerakligi haqidagi g'oya.",
+          "Millati va dinidan qat'i nazar barcha fuqarolarning tinch-totuv yashashi va mamlakat ravnaqi yo'lida birlashishi.",
+          "Turli din vakillarining o'z madaniyatidan voz kechib, umumiy bir madaniyatga bo'ysunishi haqidagi tushuncha.",
+          "Barcha diniy bayramlarni bitta umumiy kalendar asosida nishonlash va diniy farqlarni inkor etish g'oyasi.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Diniy bayramlar va marosimlarda milliy an'analarning uyg'unlashishi qanday ijtimoiy natija beradi?",
+        options: [
+          "Diniy qoidalarning buzilishiga va dinning o'z asl qiyofasini yo'qotishiga olib keladi.",
+          "Dinning xalqchil bo'lishiga, ma'naviy qadriyatlarning avloddan-avlodga tabiiy o'tishiga va ijtimoiy birdamlikka xizmat qiladi.",
+          "Aholi o'rtasida ortiqcha sarf-xarajatlarning ko'payishiga va iqtisodiy qiyinchiliklarning yuzaga kelishiga sabab bo'ladi.",
+          "Diniy va dunyoviy odamlar o'rtasida tushunmovchiliklar kelib chiqishiga va jamiyatning tabaqalanishiga olib keladi.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Islomda axloqiy tarbiyaning jamiyat barqarorligidagi o'rni nimalarda ko'rinadi?",
+        options: [
+          "Faqatgina kattalarga hurmat va kichiklarga izzat ko'rsatish kabi umumiy qoidalarni targ'ib qilishda.",
+          "Insonning xulq-atvorini ichki nazorat (vijdon va iymon) orqali tartibga solishda va jinoyatchilikning oldini olishda.",
+          "Insonlarni barcha ijtimoiy faollikdan to'xtatish va ularni faqatgina shaxsiy ma'naviy poklanishga yo'naltirishda.",
+          "Jamiyatda faqatgina diniy qonunlar bilan ish yuritishga va dunyoviy qonunlarni inkor etishga chorlashda.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Diniy sohadagi xalqaro hamkorlikning terrorizmga qarshi kurashdagi ahamiyati nimada?",
+        options: [
+          "Barcha davlatlarning harbiy salohiyatini birlashtirish va diniy guruhlarga qarshi faqat kuch ishlatish choralarini qo'llash.",
+          "Mafkuraviy bo'shliqni to'ldirish, tajriba almashish va 'jaholatga qarshi ma'rifat' bilan kurashish strategiyasini ishlab chiqishda.",
+          "Xorijiy diniy tashkilotlarning mahalliy ishlariga aralashishiga yo'l ochish va ularning ko'rsatmalarini bajarishda.",
+          "Diniy sohadagi hamkorlik orqali faqatgina iqtisodiy foyda ko'rish va qurol-yarog' savdosini nazorat qilishda.",
+        ],
+        correct: 1,
+      },
+    ]),
+  },
+
+  topic7: {
+    title: "7-Bo'lim",
+    questions: randomizeQuestions([
+      {
+        q: "Din inson axloqini shakllantirishda qanday fundamental vazifani amalga oshiradi?",
+        options: [
+          "Insonni faqatgina jamiyat qonunlariga jismonan bo'ysundirish va jazo choralaridan qo'rqitish orqali tartibga soladi.",
+          "Halollik, ota-onaga hurmat va saxovat kabi xislatlarni dindorlikning ajralmas qismi va ma'naviy burch sifatida uqtiradi.",
+          "Insonni barcha dunyoviy orzu-havaslardan voz kechishga va faqatgina tarkidunyo qilish orqali poklanishga chaqiradi.",
+          "Axloqiy me'yorlarni faqat diniy marosimlar doirasida saqlashni va ijtimoiy hayotda ularga rioya qilmaslikni targ'ib qiladi.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Din ijtimoiy barqarorlikni ta’minlashda qanday ma’naviy ahamiyatga ega?",
+        options: [
+          "Odamlarni faqat bir xil e'tiqod atrofida birlashtirib, boshqa din vakillariga nisbatan ijtimoiy masofa saqlashga undaydi.",
+          "Davlat boshqaruvining barcha sohalarini diniy qoidalar asosida nazorat qilish orqali jamiyatda tartib o'rnatadi.",
+          "Insonlarni bir-biriga rahm-shafqatli bo‘lishga va mavjud qonun-qoidalarga ma’naviy mas'uliyat bilan rioya qilishga undaydi.",
+          "Jamiyatdagi ijtimoiy tengsizlikni din orqali qonuniylashtiradi va insonlarni bunga hech qanday qarshiliksiz ko'nishga chorlaydi.",
+        ],
+        correct: 2,
+      },
+      {
+        q: "Din va ma’naviyat o‘rtasidagi uzviy bog‘liqlik qaysi javobda to‘g‘ri ifodalangan?",
+        options: [
+          "Ma'naviyat va din bir-biridan mustaqil sohalar bo'lib, insonning ichki olamiga turlicha ta'sir ko'rsatadigan tizimlardir.",
+          "Ma’naviyat insonning ichki dunyosi bo‘lsa, din bu dunyoni boyituvchi va unga aniq yo‘nalish beruvchi asosiy manbadir.",
+          "Din faqatgina tashqi marosimlardan iborat tizimdir, ma'naviyat esa faqatgina dunyoviy bilimlar asosida shakllanadigan tushunchadir.",
+          "Ma'naviyat dinning o'rnini bosuvchi zamonaviy tushuncha bo'lib, bugungi kunda dinning ahamiyatini pasaytirishga xizmat qiladi.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Diniy qadriyatlarni yosh avlodga yetkazishning eng samarali va zamonaviy usuli qaysi?",
+        options: [
+          "Faqatgina diniy matnlarni majburiy yodlatish va ularni ijtimoiy hayotdan ajratgan holda o'rgatish.",
+          "Shaxsiy namuna, interaktiv darslar va zamonaviy media-kontentlar orqali qadriyatlarni tushuntirish.",
+          "Yoshlarni axborot texnologiyalaridan uzoqlashtirgan holda faqat an'anaviy maktablarda ta'lim berish.",
+          "Diniy qarashlarni faqat oilaviy muhit bilan cheklab, ijtimoiy institutlarning bu jarayondagi rolini inkor etish.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Ma’rifat va diniy bilim o‘rtasidagi o'zaro nisbatni qanday tushunish kerak?",
+        options: [
+          "Diniy bilim bu ma'rifatning bir qismi bo'lib, ular orasida hech qanday farq yoki o'ziga xos xususiyat mavjud emas.",
+          "Diniy bilim — hukmlarni bilish, ma’rifat esa bilim asosida insonning qalban va aqlan yuksalib, dunyoni chuqur anglashidir.",
+          "Ma'rifat faqat dunyoviy fanlarni o'rganishni, diniy bilim esa faqat ibodat qoidalarini yod olishni anglatadi.",
+          "Diniy bilim ma'rifatdan ko'ra ustunroq bo'lib, insonning intellektual salohiyatiga hech qanday bog'liqligi yo'qdir.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Diniy bilimning noto‘g‘ri talqin qilinishi jamiyatda qanday xavfli tendensiyalarni keltirib chiqaradi?",
+        options: [
+          "Jamiyatda ilmiy tadqiqotlarning ko'payishiga va dinlararo muloqotning yanada mustahkamlanishiga olib keladi.",
+          "Mutaassiblik, odamlarni guruhlarga ajratish va ijtimoiy barqarorlikka raxna soluvchi to‘qnashuvlarga zamin yaratadi.",
+          "Insonlarning shaxsiy erkinliklarini oshiradi va ularning dindagi turli oqimlarni mustaqil tanlashiga yordam beradi.",
+          "Diniy tashkilotlarning iqtisodiy qudratini oshiradi va ularning davlat bilan hamkorligini kuchaytiradi.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Globallashuv sharoitida dinshunoslik fanining o‘rganilishi nima uchun dolzarb hisoblanadi?",
+        options: [
+          "Yangi paydo bo'layotgan diniy oqimlarning moliyaviy manbalarini aniqlash va ularni soliqqa tortish uchun.",
+          "Turli g‘oyalar oqimida to‘g‘ri yo‘lni tanlash, dinlar tarixini bilish va mafkuraviy xurujlardan himoyalanish uchun.",
+          "Barcha dinlarni yagona bir qolipga solish va dunyo miqyosida yagona diniy boshqaruvni joriy etish uchun.",
+          "Dinning jamiyatdagi rolini pasaytirish va aholini faqatgina texnologik yangiliklarga yo'naltirish uchun.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Dinshunoslik fanining asosiy vazifasi qaysi javobda xolis ko'rsatilgan?",
+        options: [
+          "Muayyan bir dinning boshqa dinlardan ustun ekanligini ilmiy va nazariy jihatdan isbotlab berish.",
+          "Dinlarning kelib chiqishi, rivojlanishi va jamiyatdagi o‘rnini xolis ilmiy hamda tarixiy asosda o‘rganish.",
+          "Diniy marosimlarni o'tkazish tartibini belgilash va diniy xizmatchilarning faoliyatini nazorat qilish.",
+          "Faqatgina muqaddas kitoblardagi mo''jizalarni ilmiy nuqtai nazardan tahlil qilish va ularni isbotlash.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Dinshunoslik fanini o‘rganishdan ko‘zlangan yakuniy strategik maqsad nima?",
+        options: [
+          "Dunyoviy va diniy dunyoqarashlar muvozanatini saqlash hamda diniy bag‘rikenglik madaniyatini yuksaltirish.",
+          "Jamiyatni butunlay dindan uzoqlashtirish va faqatgina ateistik dunyoqarashni shakllantirish.",
+          "Barcha diniy nizolarni harbiy yo'l bilan hal qilish uchun nazariy tavsiyalar ishlab chiqish.",
+          "Diniy tashkilotlar o'rtasida raqobatni kuchaytirish va ularning siyosiy nufuzini oshirish.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "“Fiqh” so‘zining lug‘aviy ma’nosi qaysi javobda to‘g‘ri bayon etilgan?",
+        options: [
+          "Biror narsani shunchaki yod olish va uni o'zgarishsiz qabul qilish.",
+          "Bir narsani yoki hodisani chuqur anglash, mohiyatiga yetib tushunish.",
+          "Diniy hukmlarni jamlash va ularni kitob holiga keltirish jarayoni.",
+          "Faqat ibodat masalalarida kishilarga ko'rsatma berish va fatvo chiqarish.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Islom olamidagi to‘rtta mashhur fiqhiy mazhabning to‘g‘ri tartibini aniqlang:",
+        options: [
+          "Hanafiy, Molikiy, Shofeiy va Hanbaliy mazhablari.",
+          "Hanafiy, Moturidiy, Ash'ariy va Hanbaliy maktablari.",
+          "Hanafiy, Shofeiy, So'fiylik va Hanbaliy yo'nalishlari.",
+          "Hanafiy, Ja'fariy, Molikiy va Zaydiy mazhablari.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Imom Molik ibn Anas nima sababdan islom olamida “Madina imomi” degan sharafli nomga ega bo'lgan?",
+        options: [
+          "Chunki u Madina shahrining hokimi bo'lgan va barcha diniy islohotlarni boshqargan.",
+          "Deyarli butun umrini Madinada o‘tkazgani va Madina ahlining amallarini sunnat asosi deb bilgani uchun.",
+          "Faqatgina Madina shahridagi odamlar uchun fatvo berish huquqiga ega bo'lganligi sababli.",
+          "U asos solgan mazhab faqat Madina shahri doirasidagina amal qilgani va boshqa joyga tarqalmagani uchun.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Imom Molikning “Al-Muvatto” asari islom huquqshunosligida qanday ahamiyatga ega?",
+        options: [
+          "U faqatgina Madina shahri tarixi va u yerdagi qabilalar haqida ma'lumot beruvchi geografik asardir.",
+          "Bu asar islom olamidagi birinchi hadis va fiqhni o'zida jamlagan tizimli manbalardan biri hisoblanadi.",
+          "Asar faqatgina tasavvufiy qarashlarni o'z ichiga olgan va huquqiy masalalarga daxli yo'qdir.",
+          "Bu kitob Imom Molikning shaxsiy hayoti va u kishining ustozlari haqidagi xotiralardan iboratdir.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Imom Shofeiyning fiqhiy qarashlari shakllanishida qaysi ikki maktabning ta’siri kuchli bo'lgan?",
+        options: [
+          "Faqatgina Makka va Qohira fiqhiy maktablarining ta'siri ostida shakllangan.",
+          "Hijoz (Molikiy) va Iroq (Hanafiy) fiqhiy maktablarining bilimlarini o'zida mujassam etgan.",
+          "Hindiston va Markaziy Osiyo hududidagi qadimiy huquqiy tizimlarning ta'sirida bo'lgan.",
+          "Andalus va Shimoliy Afrika hududidagi mahalliy an'analarga asoslangan maktablardan ta'lim olgan.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Hanbaliy mazhabida huquqiy hukm chiqarishda qaysi manbalarga asosiy e'tibor qaratiladi?",
+        options: [
+          "Faqatgina olimlarning o'zaro ittifoqi (ijmo) va mantiqiy qiyosga (ray).",
+          "Qur’on, Sunnat, sahobalarning fatvolari va mursal hadislarga.",
+          "Mahalliy urf-odatlar va jamiyatdagi mavjud dunyoviy qonunlarga.",
+          "Faqatgina Imom Ahmad ibn Hanbalning shaxsiy asarlari va tavsiyalariga.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Imom Shofeiyning “Ar-Risola” asari islom ilm-fanida qanday yangilik yaratgan?",
+        options: [
+          "Ushbu asar bilan islom huquqshunosligi metodologiyasi — 'Usulul fiqh' faniga asos solingan.",
+          "Asar faqatgina ibodatning qoidalari haqidagi savol-javoblar to'plamidan iboratdir.",
+          "Ushbu kitobda faqatgina tilshunoslik va arab tili grammatikasi masalalari yoritilgan.",
+          "Bu asar islom dinidagi barcha mazhablarni bitta umumiy tizimga birlashtirishni taklif etgan.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Imom Ahmad ibn Hanbalning dindorlar o'rtasidagi nufuzi nima bilan izohlanadi?",
+        options: [
+          "U kishining juda katta boylikka ega bo'lgani va xayriya ishlarini o'tkazgani bilan.",
+          "Aqida masalalaridagi mustahkamligi, hadislarni mukammal bilishi va zohidona hayoti bilan.",
+          "Faqatgina davlat arboblari bilan yaqin aloqada bo'lganligi va siyosiy faolligi bilan.",
+          "Yangi dinni targ'ib qilgani va an'anaviy qarashlarni butunlay rad etgani bilan.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "To'rtta fiqhiy mazhab o'rtasidagi farqlarga qanday munosabatda bo'lish to'g'ri hisoblanadi?",
+        options: [
+          "Bu farqlarni bir-birini inkor etuvchi qarama-qarshiliklar va xato deb baholash kerak.",
+          "Ularni islom huquqining keng imkoniyatlari, ma'naviy boyligi va 'rahmat' deb qabul qilish kerak.",
+          "Faqatgina bitta mazhabni to'g'ri deb bilib, qolganlarini asossiz deb rad etish kerak.",
+          "Mazhablar o'rtasidagi farqlarni yo'qotish uchun ularning barchasidan voz kechish kerak.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Fiqh va huquqshunoslik o‘rtasidagi o'zaro aloqadorlik qaysi javobda to'g'ri ko'rsatilgan?",
+        options: [
+          "Fiqh faqatgina axloqiy maslahatlardir, huquqshunoslik esa faqat davlat qonunlaridir.",
+          "Fiqh — shariat amallarini batafsil o'rganuvchi soha bo'lib, islom huquqshunosligining asosi hisoblanadi.",
+          "Bu ikkala tushuncha bir-birini mutlaqo inkor etuvchi va turlicha metodlarga tayanuvchi sohalardir.",
+          "Fiqh faqat o'tmishda qolib ketgan tizim bo'lib, zamonaviy huquqshunoslikda uning o'rni yo'qdir.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Imom Shofeiy nima uchun 'Sunnatni himoya qiluvchi' (Nosirush-sunna) deb atalgan?",
+        options: [
+          "Faqatgina hadislarni yig'ish bilan shug'ullangani va ularni tahrir qilgani uchun.",
+          "Hadislarning islom huquqidagi o'rnini mustahkamlab, ularni fiqhiy hukmlarga asos qilib bergani uchun.",
+          "Faqatgina hadis aytuvchi roviylar hayotini o'rgangani va ularni tartiblashtirgani uchun.",
+          "U kishi hadislarni davlat qonunlari darajasiga ko'tarish haqida maxsus farmon bergani uchun.",
+        ],
+        correct: 1,
+      },
+
+      {
+        q: "Muhammad ibn Ali Qaffol Shoshiyning islom huquqshunosligi tarixidagi o'rni qaysi javobda to'g'ri ko'rsatilgan?",
+        options: [
+          "U kishi Hanafiy mazhabining yirik vakili bo'lib, Movarounnahrda ushbu mazhabni tizimlashtirgan.",
+          "Toshkentlik buyuk alloma bo'lib, Shofeiy mazhabiga mansub bo'lgan va fiqh usulini rivojlantirgan.",
+          "Markaziy Osiyoda birinchi bo'lib mazhabsizlik g'oyasiga asos solgan va erkin ijtihodni targ'ib qilgan.",
+          "Faqatgina hadis ilmi bilan shug'ullangan va to'rtta fiqhiy mazhabga ham aloqador bo'lmagan olim.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Fiqhiy mazhablarning bir-biriga nisbatan munosabatidagi asosiy tamoyil qaysi variantda to'g'ri ifodalangan?",
+        options: [
+          "Faqatgina o'z mazhabining mutloq to'g'riligini va boshqa barcha qarashlarning dindan chiqish ekanligini ta'kidlash.",
+          "O'z mazhabini 'to'g'ri, ammo xato ehtimoli bor', boshqalarnikini 'xato, ammo to'g'ri ehtimoli bor' deb e'tirof etish.",
+          "Barcha mazhablar o'rtasidagi farqlarni yo'qotib, ularni yagona bir huquqiy tizimga birlashtirishga intilish.",
+          "Boshqa mazhablarning hukmlarini o'rganishni man etish va faqat o'z imomining fatvolariga so'zsiz ergashish.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Musulmon jamiyatida 'mazhabsizlik' g'oyasining tarqalishi qanday salbiy oqibatlarga zamin yaratadi?",
+        options: [
+          "Jamiyatda erkin fikrlashni kuchaytiradi va diniy bilimlarni ommalashtirishga yordam beradi.",
+          "Ixtilof va bo‘linishlarni keltirib chiqaradi, tartibsizlik (fartsa) hamda diniy radikalizmga yo‘l ochadi.",
+          "Barcha musulmonlarning yagona bir g'oya atrofida birlashishiga va diniy bag'rikenglikning ortishiga xizmat qiladi.",
+          "Diniy marosimlarni soddalashtirish orqali yoshlarning dinga bo'lgan qiziqishini yanada oshiradi.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Ishtilohiy ma'noda 'Fatvo' tushunchasiga berilgan eng aniq ta'rifni toping:",
+        options: [
+          "Diniy jamoa o'rtasida o'zaro kelishilgan va barcha uchun majburiy bo'lgan ijtimoiy bitim.",
+          "Vakolatli shaxs (muftiy) tomonidan shariat bo'yicha so'ralgan savolga berilgan rasmiy javob va hukm.",
+          "Faqatgina davlat rahbari tomonidan qabul qilinadigan va qonuniy kuchga ega bo'lgan diniy qaror.",
+          "Har bir musulmonning Qur'on va hadisdan mustaqil ravishda chiqargan shaxsiy xulosasi.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Mujtahid va muqallid tushunchalari o'rtasidagi mantiqiy farq nimadan iborat?",
+        options: [
+          "Mujtahid faqat ibodat bilan band bo'ladi, muqallid esa diniy bilimlarni tarqatish bilan shug'ullanadi.",
+          "Mujtahid mustaqil hukm chiqarish darajasiga yetgan olim, muqallid esa biror mazhab imomiga ergashuvchidir.",
+          "Mujtahid davlat tomonidan tayinlangan muftiy, muqallid esa oddiy diniy xizmatchi hisoblanadi.",
+          "Muqallid diniy qonunlarni ishlab chiqadi, mujtahid esa ularni amaliyotga tatbiq etish bilan shug'ullanadi.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Hanafiy va Shofeiy mazhablarining bugungi kunda keng tarqalgan jug'rofiy hududlari qaysi javobda to'g'ri ko'rsatilgan?",
+        options: [
+          "Hanafiy — Misr va Indoneziya; Shofeiy — Markaziy Osiyo va Turkiya hududlarida.",
+          "Hanafiy — Markaziy Osiyo, Turkiya va Hindiston; Shofeiy — Misr, Indoneziya va Malayziyada.",
+          "Hanafiy — Shimoliy Afrika va Ispaniya; Shofeiy — Eron va Iroq hududlarida.",
+          "Har ikkala mazhab ham faqatgina Arabiston yarim orolida va Fors ko'rfazi davlatlarida tarqalgan.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Mazhabsizlikni targ'ib qiluvchilarning hukm olish metodologiyasidagi asosiy xatosi nimada?",
+        options: [
+          "Ular hadislarni mutlaqo inkor etib, faqatgina dunyoviy qonunlarga tayanishni taklif etadilar.",
+          "Mazhab imomlarining ijtihodlarini inkor etib, har kim mustaqil ravishda Qur'on va hadisdan hukm olishi kerak deb hisoblaydilar.",
+          "Faqatgina o'tmishdagi ulamolarning qarashlariga tayanib, zamonaviy muammolarga javob bermaslikni targ'ib qiladilar.",
+          "Diniy hukmlarni faqat mantiqiy qiyos orqali chiqarib, vahiyni ikkinchi darajaga tushirib qo'yadilar.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Mazhablar o'rtasida bir masalaning turlicha talqin qilinishiga sabab bo'luvchi obyektiv omillar qaysi?",
+        options: [
+          "Diniy matnlarning (hadislarning) yetib kelish uslubi, lug'aviy ma'nolarni tushunish va ijtimoiy muhitdagi farqlar.",
+          "Mazhab imomlarining bir-biri bilan shaxsiy adovati va o'zaro raqobatda ustun kelishga intilishi.",
+          "Muqaddas kitobning turli mintaqalar uchun turlicha tahrirlarda va nusxalarda nozil bo'lganligi.",
+          "Davlat rahbarlarining o'z siyosiy manfaatlariga mos keluvchi diniy hukmlarni majburan qabul qildirishlari.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Hadisda keltirilgan 'olimning obiddan afzalligi' haqidagi o'xshatishning mazmuni nimada?",
+        options: [
+          "Obidning qilgan ibodati olimning ilmidan ko'ra jamiyat uchun ko'proq foyda keltirishi haqida.",
+          "Olimning ilm nuri bilan boshqalarga yo'l ko'rsatishi oyning yulduzlardan afzalligiga o'xshatilgan.",
+          "Olim va obidning darajasi bir xil bo'lib, biri dunyoviy, ikkinchisi diniy sohada yetakchi ekanligi haqida.",
+          "Olim faqat nazariya bilan, obid esa faqat amaliyot bilan shug'ullanishi lozimligi haqida.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Soxta salafiylarning 'biz faqat Qur'on va hadisga ergashamiz' degan da'volarining noto'g'riligi nimada?",
+        options: [
+          "Ular aslida Qur'on va hadisni butunlay rad etib, faqat o'z amirlarining buyruqlariga so'zsiz bo'ysunadilar.",
+          "Ulamolar ijtihodini inkor qilib, muqaddas matnlarni o'zlarining sayoz va noto'g'ri tushunchalari asosida talqin qiladilar.",
+          "Ular faqatgina arab tilidagi manbalardan foydalanib, boshqa tillardagi diniy adabiyotlarni tan olmaydilar.",
+          "Bu da'vo orqali ular faqatgina zamonaviy ilm-fan yutuqlaridan foydalanishni taqiqlashni maqsad qilganlar.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Markaziy Osiyo hududida dastlabki diniy tasavvurlarning shakllanishi qaysi davrga to'g'ri keladi?",
+        options: [
+          "Islom dinining mintaqaga kirib kelgan ilk o'rta asrlar davriga.",
+          "Eng qadimgi davrlarga — paleolit (tosh) davriga borib taqaladi.",
+          "Zardushtiylik dini davlat dini darajasiga ko'tarilgan antik davrga.",
+          "Mintaqada birinchi yirik shaharlar va sug'orish tizimlari paydo bo'lgan davrga.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Mintaqa xalqlari tarixida ketma-ket almashgan diniy ta'limotlarning to'g'ri ketma-ketligini aniqlang:",
+        options: [
+          "Animizm, zardushtiylik, buddaviylik, moniylik, xristianlik va islom.",
+          "Islom, zardushtiylik, buddaviylik, animizm va shomonlik.",
+          "Zardushtiylik, islom, buddaviylik, moniylik va totemizm.",
+          "Buddaviylik, xristianlik, islom, moniylik va zardushtiylik.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Ibtidoiy odamlarning qoyatosh chizmalaridagi tasvirlar qanday diniy mohiyatga ega bo'lgan?",
+        options: [
+          "Faqatgina estetik zavq olish va bino ichkarisini bezash maqsadida chizilgan.",
+          "Ov jarayonlari, hayvonlarga sig‘inish va tabiat hodisalaridan hayratlanish/qo‘rqish tuyg‘ularini ifodalagan.",
+          "Kelajak avlodlar uchun yozuv tizimini yaratish va tarixiy voqealarni xronologik qayd etish vositasi bo'lgan.",
+          "Qadimgi xaritalarni chizish va hududlarni chegaralash maqsadida qo'llanilgan.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Diniy e'tiqodlar tarixidagi 'Sinxretizm' tushunchasining mazmuni nima?",
+        options: [
+          "Muayyan bir dinning boshqa barcha dinlarni mutlaqo taqiqlashi va yo'q qilishi.",
+          "Turli diniy e’tiqod va qarashlarning bir-biri bilan qo‘shilib, aralashib ketishi.",
+          "Dinning davlatdan to'liq ajratilishi va dunyoviy hayotning ustuvorligi.",
+          "Diniy matnlarning faqatgina bitta tildan boshqa tilga tarjima qilinishi.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Fetishizm diniy tasavvuri qanday e'tiqodga asoslangan?",
+        options: [
+          "Tabiatdagi barcha hodisalar muayyan bir xudo tomonidan boshqarilishiga ishonish.",
+          "Jonsiz narsalarning (tosh, tumor, daraxt) g‘ayritabiiy kuchiga ishonish va ularga sig‘inish.",
+          "Insonning vafotidan so'ng uning ruhi boshqa bir jonzotga o'tishiga (reinkarnatsiya) ishonish.",
+          "Faqatgina olovning muqaddasligiga va uning tozalovchi kuchiga e'tiqod qilish.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Animizm tushunchasining tub mohiyati qaysi javobda to'g'ri ifodalangan?",
+        options: [
+          "Insoniyatning kelib chiqishini muayyan bir hayvon turi bilan bog'lab tushuntirish.",
+          "Tabiatdagi barcha narsa va hodisalarning (tog‘, daryo, shamol) ruhi yoki joni bor deb ishonish.",
+          "Faqatgina o'tgan ajdodlarning ruhlariga sig'inish va ulardan madad so'rash tizimi.",
+          "Yulduzlarning joylashishiga qarab inson taqdirini bashorat qilish san'ati.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Ibtidoiy davrdagi 'Ona xudo' tasavvuri jamiyatning qaysi bosqichi bilan bog'liq?",
+        options: [
+          "Patriarxat davri — erkaklar ustunligi va harbiy demokratiya bosqichi.",
+          "Matriarxat davri — unumdorlik va hayot davomiyligini ayol timsolida ulug'lash bosqichi.",
+          "Feodalizm davri — yerga egalik qilish va dehqonchilik madaniyatining shakllanishi bosqichi.",
+          "Sanoat inqilobi davri — texnologik taraqqiyot va diniy qarashlarning pasayishi bosqichi.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Totemistik qarashlarning asosiy mazmunini aniqlang:",
+        options: [
+          "Insonning g'ayritabiiy kuchlar yordamida tabiatga ta'sir o'tkaza olishiga bo'lgan ishonchi.",
+          "Muayyan insonlar guruhi (urug‘) bilan ma’lum bir hayvon yoki o‘simlik o‘rtasida qon-qardoshlik aloqasi bor deb ishonish.",
+          "Faqatgina quyosh va oyning muqaddasligiga hamda ularning hayot beruvchi kuchiga sig'inish.",
+          "Dunyoni yaratgan yagona qudratli kuchga va uning elchilariga e'tiqod qilish tizimi.",
+        ],
+        correct: 1,
+      },
+      {
+        q: "Markaziy Osiyodagi qoyatosh chizmalarida aks etgan 'ov sehri' tasvirlari nima maqsadni ko'zlagan?",
+        options: [
+          "O'ljani ramziy o'ldirish orqali haqiqiy ovda muvaffaqiyatga erishishga bo'lgan g'ayritabiiy ishonch.",
+          "Boshqa qabilalarga o'z hududidagi hayvonlar boyligi haqida hisobot berish va ularni qo'rqitish.",
+          "Qabiladagi yosh bolalarga hayvonlarning turlari va ularning tuzilishini o'rgatish (ko'rgazmali qurol).",
+          "Ibtidoiy odamlarning hayvonot olamiga bo'lgan nafratini va ularni qirib tashlash istagini ifodalash.",
+        ],
+        correct: 0,
+      },
+      {
+        q: "Ibtidoiy dinlar va zamonaviy dinlar o'rtasidagi farqni belgilovchi asosiy jihat nima?",
+        options: [
+          "Ibtidoiy dinlar faqat bitta xudoga, zamonaviy dinlar esa ko'plab ma'budalarga tayanadi.",
+          "Ibtidoiy dinlar ko'proq tabiat hodisalariga sig'inishga (mafkuraviy soddalik), zamonaviy dinlar esa tizimli aqidalarga asoslangan.",
+          "Ibtidoiy dinlarda ibodat qilish uchun maxsus binolar bo'lgan, zamonaviylarida esa faqat ochiq havoda sig'iniladi.",
+          "Zamonaviy dinlar faqat qadimiy an'analarni saqlaydi, ibtidoiy dinlar esa doimo yangilikka intilgan.",
+        ],
+        correct: 1,
+      },
+    ]),
+  },
 };
