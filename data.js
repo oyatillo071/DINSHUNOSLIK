@@ -56,7 +56,7 @@ const quizDatabase = {
       "umuminsoniy;",
       "milliy-mintaqaviy;",
       "sinfiy;",
-      "a va b xollarda;"
+      "bu yerda 2ta javob togri;"
     ],
     "correct": 3
   },
@@ -168,7 +168,7 @@ const quizDatabase = {
       "falsafaning aloxida ijtimoiy ong bo‘lib shakllanganligida",
       "turli falsafiy oqimlarning shakllanganligida;",
       "«falsafa - fanlarning fani» bo‘lib shakllanganligida;",
-      "a va b xollarda."
+      "bu yerda 2ta javob togri."
     ],
     "correct": 3
   },
@@ -237,7 +237,7 @@ const quizDatabase = {
       "uning ijtimoiy-tarixiy xarakteri;",
       "uning madaniy-ma’naviy tizimdagi aloxida o‘rni va roli."
     ],
-    "correct": 1
+    "correct": 2
   },
   {
     "q": "Eng qadimgi ilk dunyoqarash shakli?",
@@ -367,7 +367,7 @@ const quizDatabase = {
 "materiyaning namoyon bo‘lishidagi konkret bir ko‘rinishini;",
       "elementar zarrachalarning yig‘indisini."
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "q": "Monistik ta’limotlarning tub moxiyati nimadan iborat?",
@@ -595,7 +595,7 @@ const quizDatabase = {
       "muayyan ijtimoiy sinflar yoki tabaqalar irodasining qonun darajasiga ko‘tarilishi;",
       "qonun ustuvorligi ta’minlangan jamiyat;",
       "shaxs erkinligini qonunlar dengan chegaralab qo‘yadigan jamiyat;",
-      "a va b xollarda."
+      "bu yerda 2ta javob togri."
     ],
     "correct": 1
   },
